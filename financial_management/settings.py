@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-cupuqa^&6l9_nqek&1)2v&5nb0cz#v75#pa&g*ha5h1exk(^_(
 DEBUG = True
 
 ALLOWED_HOSTS = ["alavialireza.ir"]
-
+# ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'financial',
     'account',
-    'panel'
+    'panel',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -92,6 +93,23 @@ DATABASES = {
 }
 
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'financial',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'OPTIONS' : {
+#             'sql_mode' : 'STRICT_ALL_TABLES'
+#         }
+#     }
+# }
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -128,6 +146,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/financial_management/'
 ADMIN_STATIC_URL = '/static/financial_management/admin/'
+
+# STATIC_URL = '/static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
